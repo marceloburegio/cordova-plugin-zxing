@@ -14,13 +14,13 @@ A plugin for Cordova using ZXing library from https://github.com/journeyapps/zxi
 
 ## Installation
 
-cordova plugin add cordova-plugin-zxing
+    cordova plugin add cordova-plugin-zxing
 
 ## API
 
 ### Scan barcode
 
-window.plugins.zxingPlugin.scan(params, onSuccess, onFailure)
+    window.plugins.zxingPlugin.scan(params, onSuccess, onFailure)
 
 Arguments:
 
