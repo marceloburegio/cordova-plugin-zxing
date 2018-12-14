@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-zxing",
+  "version": "1.0.0",
+  "description": "ZXing Plugin for Cordova",
+  "cordova": {
+    "id": "cordova-plugin-zxing",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marceloburegio/cordova-plugin-zxing.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "zxing",
+    "barcode",
+    "qrcode",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "author": "Marcelo Buregio <marceloburegio@gmail.com>",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/marceloburegio/cordova-plugin-zxing/issues"
+  },
+  "homepage": "https://github.com/marceloburegio/cordova-plugin-zxing/"
+}
