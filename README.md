@@ -1,5 +1,16 @@
-# cordova-plugin-zxing
+# ZXing Barcode Scanner Plugin for Cordova
 A plugin for Cordova using ZXing library from https://github.com/journeyapps/zxing-android-embedded, exposing a JavaScript interface for scanning barcodes (QR, 1D/2D).
+
+## Barcode formats supported
+
+| 1D product | 1D industrial | 2D
+| ---------- | ------------- | --------------
+| UPC_A      | CODE_39       | QR_CODE
+| UPC_E      | CODE_93       | DATA_MATRIX
+| EAN_8      | CODE_128      | PDF_417
+| EAN_13     | ITF           |
+|            | RSS_14        |
+|            | RSS_EXPANDED  |
 
 ## Installation
 
@@ -30,17 +41,6 @@ Arguments:
         }
     }
     ```
-
-## Barcode formats supported:
-
-| 1D product | 1D industrial | 2D
-| ---------- | ------------- | --------------
-| UPC_A      | CODE_39       | QR_CODE
-| UPC_E      | CODE_93       | DATA_MATRIX
-| EAN_8      | CODE_128      | PDF_417
-| EAN_13     | ITF           |
-|            | RSS_14        |
-|            | RSS_EXPANDED  |
 
 - **onSuccess**: function (s) {...} _Callback for successful scan._
 - **onFailure**: function (s) {...} _Callback for cancelled scan or error._
