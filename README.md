@@ -1,6 +1,11 @@
 # ZXing Barcode Scanner Plugin for Cordova
 A plugin for Cordova using ZXing library from https://github.com/journeyapps/zxing-android-embedded, exposing a JavaScript interface for scanning barcodes (QR, 1D/2D).
 
+This library enables an inverted scan, enabling scan on dark background with white patterns.
+
+Works only on Android devices.
+
+
 ## Barcode formats supported
 
 | 1D product | 1D industrial | 2D
@@ -28,14 +33,15 @@ Arguments:
 
     ```javascript
     {
-        'prompt_message':'Scan a barcode', // Change the info message
+        'prompt_message':'Scan a barcode', // Change the info message. A blank message ('') will show a default message.
         'orientation_locked':true, // Lock the orientation screen
         'camera_id':0, // Choose the camera source
         'beep_enabled':true, // Enables a beep after the scan
+        'scan_type':'', // Types of scan mode: normal = default black with white background / inverted = white bars on dark background / mixed = normal and inverted modes
         'barcode_formats':[
             'QR_CODE',
             'CODE_39',
-            'CODE_128'], // Put a list of formats that the scanner will find
+            'CODE_128'], // Put a list of formats that the scanner will find. A blank list ([]) will enable scan of all barcode types.
         'extras':{
             'SCAN_TYPE':2 // Additional extra parameters
         }
@@ -52,6 +58,23 @@ Return:
 - error('misc error message') _Misc failure_
 
 
-## LICENSE [Apache 2.0](LICENSE.md)
+## LICENSE [Apache License 2.0](LICENSE.md)
 
-This plugin is released under the Apache 2.0 license
+This plugin is released under the [Apache License 2.0][1]
+
+    Copyright 2012-2018 ZXing authors, Journey Mobile, Marcelo Buregio
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+
+[1]: http://www.apache.org/licenses/LICENSE-2.0

@@ -1,3 +1,18 @@
+/*
+ * Copyright 2012-2018 Marcelo Buregio
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.marceloburegio.zxingplugin;
 
 // Cordova-required packages
@@ -34,7 +49,7 @@ public class ZXingPlugin extends CordovaPlugin {
         cordova.setActivityResultCallback(this);
         try {
             JSONObject params = args.getJSONObject(0);
-            if (params.has("prompt_message")) integrator.setPrompt(params.getString("prompt_message")); // Prompt Message
+            if (params.has("prompt_message") && params.getString("prompt_message").length() > 0) integrator.setPrompt(params.getString("prompt_message")); // Prompt Message
             if (params.has("orientation_locked")) integrator.setOrientationLocked(params.getBoolean("orientation_locked")); // Orientation Locked
             if (params.has("camera_id")) integrator.setCameraId(params.getInt("camera_id")); // Camera Id
             if (params.has("beep_enabled")) integrator.setBeepEnabled(params.getBoolean("beep_enabled")); // Beep Enabled
@@ -56,8 +71,8 @@ public class ZXingPlugin extends CordovaPlugin {
                     for (int i = 0; i < barcodeFormats.length(); i++) {
                         formats.add(barcodeFormats.getString(i));
                     }
+                    if (!formats.isEmpty()) integrator.setDesiredBarcodeFormats(formats);
                 }
-                integrator.setDesiredBarcodeFormats(formats);
             }
             
             // Extras

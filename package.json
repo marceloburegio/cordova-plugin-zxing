@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-zxing",
-  "version": "1.0.0",
-  "description": "ZXing Plugin for Cordova",
+  "version": "1.0.1",
+  "description": "ZXing Barcode Scanner Plugin for Cordova",
   "cordova": {
     "id": "cordova-plugin-zxing",
     "platforms": [
