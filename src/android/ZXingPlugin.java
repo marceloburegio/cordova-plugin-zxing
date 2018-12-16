@@ -79,10 +79,12 @@ public class ZXingPlugin extends CordovaPlugin {
             JSONObject extras = params.has("extras") ? params.getJSONObject("extras") : null;
             if (extras != null) {
                 JSONArray extraNames = extras.names();
-                for (int i = 0; i < extraNames.length(); i++) {
-                    String key = extraNames.getString(i);
-                    Object value = extras.get(key);
-                    integrator.addExtra(key, value);
+                if (extraNames != null) {
+                    for (int i = 0; i < extraNames.length(); i++) {
+                        String key = extraNames.getString(i);
+                        Object value = extras.get(key);
+                        integrator.addExtra(key, value);
+                    }
                 }
             }
         } catch (JSONException e) {

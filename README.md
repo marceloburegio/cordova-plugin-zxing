@@ -33,7 +33,7 @@ Arguments:
 
     ```javascript
     {
-        'prompt_message':'Scan a barcode', // Change the info message. A blank message ('') will show a default message.
+        'prompt_message':'Scan a barcode', // Change the info message. A blank message ('') will show a default message
         'orientation_locked':true, // Lock the orientation screen
         'camera_id':0, // Choose the camera source
         'beep_enabled':true, // Enables a beep after the scan
@@ -41,10 +41,8 @@ Arguments:
         'barcode_formats':[
             'QR_CODE',
             'CODE_39',
-            'CODE_128'], // Put a list of formats that the scanner will find. A blank list ([]) will enable scan of all barcode types.
-        'extras':{
-            'SCAN_TYPE':2 // Additional extra parameters
-        }
+            'CODE_128'], // Put a list of formats that the scanner will find. A blank list ([]) will enable scan of all barcode types
+        'extras':{} // Additional extra parameters. See [ZXing Journey Apps][1] IntentIntegrator and Intents for more details
     }
     ```
 
@@ -60,7 +58,7 @@ Return:
 
 ## LICENSE [Apache License 2.0](LICENSE.md)
 
-This plugin is released under the [Apache License 2.0][1]
+This plugin is released under the [Apache License 2.0][2]
 
     Copyright 2012-2018 ZXing authors, Journey Mobile, Marcelo Buregio
     
@@ -77,4 +75,5 @@ This plugin is released under the [Apache License 2.0][1]
     limitations under the License.
 
 
-[1]: http://www.apache.org/licenses/LICENSE-2.0
+[1]: https://github.com/journeyapps/zxing-android-embedded
+[2]: http://www.apache.org/licenses/LICENSE-2.0
